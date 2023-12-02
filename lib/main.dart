@@ -15,7 +15,7 @@ class FirstScreen extends StatefulWidget {
 
 class _FirstScreen extends State<FirstScreen> {
   bool _isFavorited = true;
-
+  String selectedSize = '25cm';
   void _toggleFavorite() {
     setState(() {
       _isFavorited = !_isFavorited;
@@ -70,7 +70,13 @@ class _FirstScreen extends State<FirstScreen> {
                 ),
                 Container(
                   decoration: const BoxDecoration(
-                      color: Colors.deepOrangeAccent,
+                      gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            Color.fromARGB(255, 231, 71, 23),
+                            Colors.white
+                          ]),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(50.0),
                         topRight: Radius.circular(50.0),
@@ -112,9 +118,9 @@ class _FirstScreen extends State<FirstScreen> {
                             height: 15.0,
                           ),
                           const Text(
-                           'Los Jordan Air 1, icónicos y culturales, ofrecen más que zapatillas.'
-                           ' La distintiva caja Jumpman incluye detalles exclusivos y, como obsequio, un llavero. '
-                           'Cada par cuenta una historia, fusionando moda y autenticidad en una experiencia única.',
+                            'Los Jordan Air 1, icónicos y culturales, ofrecen más que zapatillas.'
+                            ' La distintiva caja Jumpman incluye detalles exclusivos y, como obsequio, un llavero. '
+                            'Cada par cuenta una historia, fusionando moda y autenticidad en una experiencia única.',
                             style:
                                 TextStyle(letterSpacing: 2.0, fontSize: 17.0),
                           ),
@@ -159,7 +165,7 @@ class _FirstScreen extends State<FirstScreen> {
                                         TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ],
