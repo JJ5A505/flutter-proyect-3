@@ -46,11 +46,11 @@ class _CounterDesign extends State<CounterDesign> {
                 },
               ),
               const SizedBox(
-                width: 10.0,
+                width: 4.0,
               ),
-               Text('$_n', style: new TextStyle(fontSize: 30.0)),
+               Text('$_n', style: new TextStyle(fontSize: 25.0)),
               const SizedBox(
-                width: 10.0,
+                width: 5.0,
               ),
                IconButton(
                 icon: const Icon(
